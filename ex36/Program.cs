@@ -3,23 +3,19 @@
 [3, 7, 23, 12] -> 19
 [-4, -6, 89, 6] -> 0 */
 
-int size = 7;
+int size = 4;
 int[] numbers = new int[size];
 int sum = 0;
 
 FillArrayRandomNumbres(numbers);
 PrintArray(numbers);
 
-for (int i=0; i < numbers.Length; i++)
+for (int i=1; i < numbers.Length; i=i+2)
 {
-   if(i %2 ==0)
-   {
-     sum += numbers[i];
-   }
+   sum += numbers[i];
 }
 
-
-Console.Write (sum);
+Console.Write ($"Сумма элементов, стоящих на нечётных позициях: {sum} ");
 
 
 void FillArrayRandomNumbres(int[] array)
